@@ -1,0 +1,252 @@
+2025-11-14 18:47:41 [ERROR] OpenAI API error: 401 Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.
+Error: 401 Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.
+    at APIError.generate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\error.js:48:20)
+    at OpenAI.makeStatusError (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:302:33)
+    at OpenAI.makeRequest (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:346:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:48:26)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api",
+  "status": 401,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "99e855d54c175bcb-TUN",
+    "connection": "keep-alive",
+    "content-length": "274",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Fri, 14 Nov 2025 17:47:40 GMT",
+    "server": "cloudflare",
+    "set-cookie": "__cf_bm=HUYeBcyU.TUoBz9p0ek88cbqNJQ8UkP1bd25Z4vlVxg-1763142460-1.0.1.1-H9hesrvIp_Y2JB9bom_I.kqoIe_tCdaGy57QN40ZG6Ththfk5bRBkm9JYnZ2BIhByZ9kVWvPYoW8fU0BlnsaFvRFAHo7RcYCNI6EwdcxfJs; path=/; expires=Fri, 14-Nov-25 18:17:40 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=wM3e.7wyzY7nBF7geMsmf8wo5YYTrEcPTmsHf2gkY4U-1763142460973-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "17",
+    "x-openai-proxy-wasm": "v0.1",
+    "x-request-id": "req_f79145f042014baab6d962f8072a0a0a"
+  },
+  "request_id": "req_f79145f042014baab6d962f8072a0a0a",
+  "error": {
+    "message": "Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "invalid_api_key"
+  },
+  "code": "invalid_api_key",
+  "param": null,
+  "type": "invalid_request_error"
+}
+2025-11-14 18:47:41 [ERROR] Menu generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 18:47:41 [ERROR] Smart suggestions generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 19:03:23 [ERROR] Google Vision API error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+Error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+    at Object.realpathSync (node:fs:2787:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:375:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:316:25)
+    at GoogleAuth.getApplicationDefaultAsync (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:260:24)
+    at GoogleAuth._GoogleAuth_determineClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:834:43)
+    at GoogleAuth.getClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:696:223)
+    at GrpcClient._getCredentials (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:145:40)
+    at GrpcClient.createStub (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:318:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "service": "recipe-manager-api",
+  "errno": -4058,
+  "code": "ENOENT",
+  "syscall": "lstat",
+  "path": "C:\\recipe-manager-backend\\recipe-manager-backend\\google-credentials.json"
+}
+2025-11-14 19:03:23 [ERROR] Ingredient detection error: Erreur lors de la reconnaissance d'image
+Error: Erreur lors de la reconnaissance d'image
+    at ImageRecognitionService.detectIngredientsFromImage (C:\recipe-manager-backend\recipe-manager-backend\services\ai\imageRecognition.service.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.detectIngredients (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:147:25)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 19:03:32 [ERROR] Google Vision API error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+Error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+    at Object.realpathSync (node:fs:2787:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:375:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:316:25)
+    at GoogleAuth.getApplicationDefaultAsync (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:260:24)
+    at GoogleAuth._GoogleAuth_determineClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:834:43)
+    at GoogleAuth.getClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:696:223)
+    at GrpcClient._getCredentials (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:145:40)
+    at GrpcClient.createStub (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:318:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "service": "recipe-manager-api",
+  "errno": -4058,
+  "code": "ENOENT",
+  "syscall": "lstat",
+  "path": "C:\\recipe-manager-backend\\recipe-manager-backend\\google-credentials.json"
+}
+2025-11-14 19:03:32 [ERROR] Ingredient detection error: Erreur lors de la reconnaissance d'image
+Error: Erreur lors de la reconnaissance d'image
+    at ImageRecognitionService.detectIngredientsFromImage (C:\recipe-manager-backend\recipe-manager-backend\services\ai\imageRecognition.service.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.detectIngredients (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:147:25)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 19:03:46 [ERROR] OpenAI API error: 401 Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.
+Error: 401 Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.
+    at APIError.generate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\error.js:48:20)
+    at OpenAI.makeStatusError (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:302:33)
+    at OpenAI.makeRequest (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:346:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:48:26)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api",
+  "status": 401,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "99e86d623eac5bca-TUN",
+    "connection": "keep-alive",
+    "content-length": "274",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Fri, 14 Nov 2025 18:03:45 GMT",
+    "server": "cloudflare",
+    "set-cookie": "__cf_bm=kGP8vXoP.tEZX_kdGz2Ees7WTnwiUpUGDBzg.6ZpztQ-1763143425-1.0.1.1-oQWLq69U1n7p4LbyfbsxgK_71GmeBIznkIRALzqGdDiNK96pVIlQJ7A4U2TFB3HRtzysh2U_n2pmL3fL.yxXYA9EvcgTDU.VITwLKCnvqaU; path=/; expires=Fri, 14-Nov-25 18:33:45 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=w2vMefSz1hsuOfRewF.hgmxs6hNFX9LsWMjdsHJgfjg-1763143425704-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "15",
+    "x-openai-proxy-wasm": "v0.1",
+    "x-request-id": "req_d190804134f84a8d9673ea6b5802255e"
+  },
+  "request_id": "req_d190804134f84a8d9673ea6b5802255e",
+  "error": {
+    "message": "Incorrect API key provided: votre_cl************_ici. You can find your API key at https://platform.openai.com/account/api-keys.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "invalid_api_key"
+  },
+  "code": "invalid_api_key",
+  "param": null,
+  "type": "invalid_request_error"
+}
+2025-11-14 19:03:46 [ERROR] Menu generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 19:03:46 [ERROR] Smart suggestions generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 19:25:37 [ERROR] Google Vision API error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+Error: The file at ./google-credentials.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\recipe-manager-backend\recipe-manager-backend\google-credentials.json'
+    at Object.realpathSync (node:fs:2787:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:375:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:316:25)
+    at GoogleAuth.getApplicationDefaultAsync (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:260:24)
+    at GoogleAuth._GoogleAuth_determineClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:834:43)
+    at GoogleAuth.getClient (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-auth-library\build\src\auth\googleauth.js:696:223)
+    at GrpcClient._getCredentials (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:145:40)
+    at GrpcClient.createStub (C:\recipe-manager-backend\recipe-manager-backend\node_modules\google-gax\build\src\grpc.js:318:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "service": "recipe-manager-api",
+  "errno": -4058,
+  "code": "ENOENT",
+  "syscall": "lstat",
+  "path": "C:\\recipe-manager-backend\\recipe-manager-backend\\google-credentials.json"
+}
+2025-11-14 19:25:37 [ERROR] Ingredient detection error: Erreur lors de la reconnaissance d'image
+Error: Erreur lors de la reconnaissance d'image
+    at ImageRecognitionService.detectIngredientsFromImage (C:\recipe-manager-backend\recipe-manager-backend\services\ai\imageRecognition.service.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.detectIngredients (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:147:25)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 20:33:38 [ERROR] OpenAI API error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+    at APIError.generate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\error.js:63:20)
+    at OpenAI.makeStatusError (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:302:33)
+    at OpenAI.makeRequest (C:\recipe-manager-backend\recipe-manager-backend\node_modules\openai\core.js:346:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:48:26)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api",
+  "status": 429,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "99e8f10b2c555bcb-TUN",
+    "connection": "keep-alive",
+    "content-length": "337",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Fri, 14 Nov 2025 19:33:37 GMT",
+    "server": "cloudflare",
+    "set-cookie": "__cf_bm=8mvHVyh4FBXHqEliA1CFrBPL_qWkv6IMuiHXpQTBg5M-1763148817-1.0.1.1-ui2fLP7M7qsIP2sFacSBheB7P4ACv5aAAA.lKVFyYDXessFJE_22Ek3hJW6NcPfAT2WCSHv8XXO0V08wseeLRxMIaVuop5rk6o7LLA_rY6s; path=/; expires=Fri, 14-Nov-25 20:03:37 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=fFtyj3Sqj3OqjsjQZmMa64Jk16S3qvzcWj2FjHoDnq8-1763148817772-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "vary": "Origin",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "146",
+    "x-openai-proxy-wasm": "v0.1",
+    "x-request-id": "req_666a6e47265246feb94d89be77abea8c"
+  },
+  "request_id": "req_666a6e47265246feb94d89be77abea8c",
+  "error": {
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+    "type": "insufficient_quota",
+    "param": null,
+    "code": "insufficient_quota"
+  },
+  "code": "insufficient_quota",
+  "param": null,
+  "type": "insufficient_quota"
+}
+2025-11-14 20:33:38 [ERROR] Menu generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 20:33:38 [ERROR] Smart suggestions generation error: Erreur lors de la génération du menu
+Error: Erreur lors de la génération du menu
+    at AIService.generateMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\ai.service.js:71:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async RecipeGeneratorService.generateAndSaveMenu (C:\recipe-manager-backend\recipe-manager-backend\services\ai\recipeGenerator.service.js:40:22)
+    at async exports.generateSmartSuggestions (C:\recipe-manager-backend\recipe-manager-backend\controllers\ai.controller.js:107:24)
+{
+  "service": "recipe-manager-api"
+}

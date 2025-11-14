@@ -1,0 +1,27 @@
+name: recipe_manager_frontend
+description: A Flutter frontend for Recipe Manager with GetX architecture.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+  get_it: ^7.6.4
+  http: ^1.2.0
+  google_fonts: ^6.1.0
+  dartz: ^0.10.1
+  get_storage: ^2.1.1
+  flutter_svg: ^2.0.9
+  image_picker: ^1.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
