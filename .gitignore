@@ -1,0 +1,11 @@
+# Flutter
+**/build/
+**/.dart_tool/
+**/.packages
+.android/
+.ios/
+.idea/
+
+# Node.js
+backend/node_modules/
+.env

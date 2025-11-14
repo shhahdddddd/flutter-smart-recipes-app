@@ -1050,3 +1050,311 @@ Error: Erreur lors de la génération du menu
 {
   "service": "recipe-manager-api"
 }
+2025-11-14 21:33:31 [INFO] 🚀 Serveur démarré sur le port 7147
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:33:31 [INFO] 🌍 Environnement: development
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:33:31 [INFO] 📊 Health check: http://localhost:7147/health
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:03 [INFO] ::1 - - [14/Nov/2025:20:36:03 +0000] "OPTIONS /api/users/login HTTP/1.1" 204 0 "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:04 [INFO] ::1 - - [14/Nov/2025:20:36:04 +0000] "POST /api/users/login HTTP/1.1" 200 607 "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:05 [INFO] ::1 - - [14/Nov/2025:20:36:05 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:11 [INFO] ::1 - - [14/Nov/2025:20:36:11 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:25 [INFO] ::1 - - [14/Nov/2025:20:36:25 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:36:25 [INFO] ::1 - - [14/Nov/2025:20:36:25 +0000] "GET /api/recipes HTTP/1.1" 200 - "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:12 [INFO] ::1 - - [14/Nov/2025:20:37:12 +0000] "OPTIONS /api/ai/smart-suggestions HTTP/1.1" 204 0 "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:12 [INFO] Smart suggestions request from user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:12 [INFO] Generating day menu for user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:12 [INFO] Generating day menu with ingredients: tomato, cucumber, eggs
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:23 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:23 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:37:23 [INFO] ::1 - - [14/Nov/2025:20:37:23 +0000] "POST /api/ai/smart-suggestions HTTP/1.1" 200 - "http://localhost:51886/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:25 [INFO] ::1 - - [14/Nov/2025:20:51:25 +0000] "OPTIONS /api/users/login HTTP/1.1" 204 0 "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:25 [INFO] ::1 - - [14/Nov/2025:20:51:25 +0000] "POST /api/users/login HTTP/1.1" 200 607 "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:27 [INFO] ::1 - - [14/Nov/2025:20:51:27 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:27 [INFO] ::1 - - [14/Nov/2025:20:51:27 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:54 [INFO] ::1 - - [14/Nov/2025:20:51:54 +0000] "OPTIONS /api/ai/smart-suggestions HTTP/1.1" 204 0 "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:54 [INFO] Smart suggestions request from user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:54 [INFO] Generating day menu for user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:51:54 [INFO] Generating day menu with ingredients: tomato, eggs, cucumber
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:52:08 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:52:08 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:52:08 [INFO] ::1 - - [14/Nov/2025:20:52:08 +0000] "POST /api/ai/smart-suggestions HTTP/1.1" 200 - "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:53:17 [INFO] ::1 - - [14/Nov/2025:20:53:17 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 21:53:17 [INFO] ::1 - - [14/Nov/2025:20:53:17 +0000] "GET /api/recipes HTTP/1.1" 200 - "http://localhost:55171/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:06:13 [INFO] ::1 - - [14/Nov/2025:21:06:13 +0000] "OPTIONS /api/users/login HTTP/1.1" 204 0 "http://localhost:61603/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:06:22 [INFO] ::1 - - [14/Nov/2025:21:06:22 +0000] "POST /api/users/login HTTP/1.1" 200 607 "http://localhost:61603/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:06:56 [INFO] ::1 - - [14/Nov/2025:21:06:56 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:61603/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:06:57 [INFO] ::1 - - [14/Nov/2025:21:06:57 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:61603/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:10:59 [INFO] ::1 - - [14/Nov/2025:21:10:59 +0000] "OPTIONS /api/users/login HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:00 [INFO] ::1 - - [14/Nov/2025:21:11:00 +0000] "POST /api/users/login HTTP/1.1" 200 607 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:00 [INFO] ::1 - - [14/Nov/2025:21:11:00 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:00 [INFO] ::1 - - [14/Nov/2025:21:11:00 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:15 [INFO] ::1 - - [14/Nov/2025:21:11:15 +0000] "OPTIONS /api/ai/smart-suggestions HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:15 [INFO] Smart suggestions request from user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:15 [INFO] Generating day menu for user: 691631bb0124561367a24159
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:15 [INFO] Generating day menu with ingredients: tomato, cucumber, eggs
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:24 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:24 [INFO] Successfully generated day menu
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:11:24 [INFO] ::1 - - [14/Nov/2025:21:11:24 +0000] "POST /api/ai/smart-suggestions HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:00 [INFO] ::1 - - [14/Nov/2025:21:12:00 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:00 [INFO] ::1 - - [14/Nov/2025:21:12:00 +0000] "GET /api/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:04 [INFO] ::1 - - [14/Nov/2025:21:12:04 +0000] "POST /api/recipes HTTP/1.1" 201 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:04 [INFO] ::1 - - [14/Nov/2025:21:12:04 +0000] "OPTIONS /api/users/favorites/69179b24c1e442d8a3f035d6 HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:04 [INFO] ::1 - - [14/Nov/2025:21:12:04 +0000] "POST /api/users/favorites/69179b24c1e442d8a3f035d6 HTTP/1.1" 200 62 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:09 [INFO] ::1 - - [14/Nov/2025:21:12:09 +0000] "OPTIONS /api/users/favorites HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:09 [INFO] ::1 - - [14/Nov/2025:21:12:09 +0000] "GET /api/users/favorites HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:12 [INFO] ::1 - - [14/Nov/2025:21:12:12 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:12 [INFO] ::1 - - [14/Nov/2025:21:12:12 +0000] "GET /api/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:23 [INFO] ::1 - - [14/Nov/2025:21:12:23 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:23 [INFO] ::1 - - [14/Nov/2025:21:12:23 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:26 [INFO] ::1 - - [14/Nov/2025:21:12:26 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:26 [INFO] ::1 - - [14/Nov/2025:21:12:26 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:31 [INFO] ::1 - - [14/Nov/2025:21:12:31 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:36 [INFO] ::1 - - [14/Nov/2025:21:12:36 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:36 [INFO] ::1 - - [14/Nov/2025:21:12:36 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:41 [INFO] ::1 - - [14/Nov/2025:21:12:41 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:41 [INFO] ::1 - - [14/Nov/2025:21:12:41 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:50 [INFO] ::1 - - [14/Nov/2025:21:12:50 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:50 [INFO] ::1 - - [14/Nov/2025:21:12:50 +0000] "POST /api/recipes HTTP/1.1" 201 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:50 [INFO] ::1 - - [14/Nov/2025:21:12:50 +0000] "OPTIONS /api/users/favorites/69179b52c1e442d8a3f0375c HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:12:51 [INFO] ::1 - - [14/Nov/2025:21:12:51 +0000] "POST /api/users/favorites/69179b52c1e442d8a3f0375c HTTP/1.1" 200 89 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:09 [INFO] ::1 - - [14/Nov/2025:21:14:09 +0000] "OPTIONS /api/users/login HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:09 [INFO] ::1 - - [14/Nov/2025:21:14:09 +0000] "POST /api/users/login HTTP/1.1" 200 660 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:09 [INFO] ::1 - - [14/Nov/2025:21:14:09 +0000] "OPTIONS /api/users/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:09 [INFO] ::1 - - [14/Nov/2025:21:14:09 +0000] "GET /api/users/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:14 [INFO] ::1 - - [14/Nov/2025:21:14:14 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:15 [INFO] ::1 - - [14/Nov/2025:21:14:15 +0000] "GET /api/recipes HTTP/1.1" 200 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:45 [INFO] ::1 - - [14/Nov/2025:21:14:45 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:45 [INFO] ::1 - - [14/Nov/2025:21:14:45 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:48 [INFO] ::1 - - [14/Nov/2025:21:14:48 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:51 [INFO] ::1 - - [14/Nov/2025:21:14:51 +0000] "OPTIONS /api/recipes HTTP/1.1" 204 0 "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
+2025-11-14 22:14:51 [INFO] ::1 - - [14/Nov/2025:21:14:51 +0000] "GET /api/recipes HTTP/1.1" 304 - "http://localhost:52054/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+{
+  "service": "recipe-manager-api"
+}
