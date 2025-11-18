@@ -29,7 +29,10 @@ const recipeSchema = new mongoose.Schema({
     enum: ['breakfast', 'lunch', 'dinner', 'dessert', 'snack'],
   },
   calories: Number,
-  image: String,
+  image: {
+    type: String,
+    default: process.env.DEFAULT_RECIPE_IMAGE_URL || 'https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=800&q=80',
+  },
   tags: [String],
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,

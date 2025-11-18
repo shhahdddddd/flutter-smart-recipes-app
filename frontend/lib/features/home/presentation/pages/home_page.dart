@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF6F4FB),
+      backgroundColor: theme.scaffoldBackgroundColor,
       drawer: const HomeDrawer(),
       body: SafeArea(
         child: CustomScrollView(
@@ -127,9 +127,19 @@ class HomePage extends StatelessWidget {
                     Obx(() {
                       final home = Get.find<HomeController>();
                       final recs = home.recommendedRecipes;
+                      final query = home.searchQuery.value.trim().toLowerCase();
+                      final filtered = query.isEmpty
+                          ? recs
+                          : recs.where((r) {
+                              final title = r.title.toLowerCase();
+                              final desc = r.description.toLowerCase();
+                              final tags = r.tags.map((t) => t.toLowerCase()).join(' ');
+                              return title.contains(query) || desc.contains(query) || tags.contains(query);
+                            }).toList();
                       final title = recs.isNotEmpty ? 'Recommended For You' : 'Popular Recipes';
-                      final items = recs.isNotEmpty
-                          ? recs.take(8).toList().asMap().entries.map((e) {
+                      final base = filtered.isNotEmpty ? filtered : recs;
+                      final items = base.isNotEmpty
+                          ? base.take(10).toList().asMap().entries.map((e) {
                               final idx = e.key;
                               final recipe = e.value;
                               final colors = [
@@ -150,7 +160,7 @@ class HomePage extends StatelessWidget {
                           ),
                           const SizedBox(height: 12),
                           SizedBox(
-                            height: 260,
+                            height: 320,
                             child: ListView.separated(
                               scrollDirection: Axis.horizontal,
                               itemCount: items.length,
@@ -179,25 +189,34 @@ class HomePage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final text = _categories[index];
                           final isSelected = index == 0;
-                          return Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                            decoration: BoxDecoration(
-                              color: isSelected ? const Color(0xFF7C4DFF) : Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                if (!isSelected)
-                                  BoxShadow(
-                                    color: Colors.black.withValues(alpha: 0.05),
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 6),
-                                  ),
-                              ],
-                            ),
-                            child: Text(
-                              text,
-                              style: theme.textTheme.labelLarge?.copyWith(
-                                color: isSelected ? Colors.white : Colors.black87,
-                                fontWeight: FontWeight.w600,
+                          return InkWell(
+                            borderRadius: BorderRadius.circular(20),
+                            onTap: () {
+                              Get.toNamed(
+                                AppRoutes.category,
+                                arguments: {'category': text},
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                              decoration: BoxDecoration(
+                                color: isSelected ? const Color(0xFF7C4DFF) : Colors.white,
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  if (!isSelected)
+                                    BoxShadow(
+                                      color: Colors.black.withValues(alpha: 0.05),
+                                      blurRadius: 10,
+                                      offset: const Offset(0, 6),
+                                    ),
+                                ],
+                              ),
+                              child: Text(
+                                text,
+                                style: theme.textTheme.labelLarge?.copyWith(
+                                  color: isSelected ? Colors.white : Colors.black87,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           );
@@ -264,8 +283,9 @@ class _SearchField extends StatelessWidget {
         ),
       ),
       style: theme.textTheme.bodyMedium,
-      onSubmitted: (value) {
-        // Placeholder: integrate search use case later.
+      onChanged: (value) {
+        final home = Get.find<HomeController>();
+        home.setSearchQuery(value);
       },
     );
   }
@@ -294,7 +314,7 @@ class _RecipeCard extends StatelessWidget {
       onTap: () => Get.toNamed(AppRoutes.recipeDetail, arguments: data.recipe),
       borderRadius: BorderRadius.circular(24),
       child: Ink(
-        width: 180,
+        width: 240,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(24),

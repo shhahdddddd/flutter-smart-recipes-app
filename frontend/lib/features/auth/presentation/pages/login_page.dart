@@ -88,7 +88,7 @@ class LoginPage extends StatelessWidget {
                         ),
                         const SizedBox(height: 32),
                         Obx(() => GradientButton(
-                              label: controller.isLoading.value ? 'Loading...' : 'Sign In',
+                              label: controller.isLoading.value ? 'Loading...' : 'Log In',
                               onPressed: controller.isLoading.value ? null : controller.login,
                             )),
                         const SizedBox(height: 24),

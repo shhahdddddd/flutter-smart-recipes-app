@@ -6,10 +6,13 @@ import '../features/auth/presentation/pages/onboarding_page.dart';
 import '../features/auth/presentation/pages/sign_up_page.dart';
 import '../features/home/presentation/bindings/home_binding.dart';
 import '../features/home/presentation/pages/favorites_page.dart';
+import '../features/home/presentation/pages/edit_profile_page.dart';
+import '../features/home/presentation/pages/change_password_page.dart';
 import '../features/home/presentation/pages/health_preferences_page.dart';
 import '../features/home/presentation/pages/home_page.dart';
 import '../features/home/presentation/pages/manage_account_page.dart';
 import '../features/home/presentation/pages/recipe_detail_page.dart';
+import '../features/home/presentation/pages/category_page.dart';
 import '../features/home/presentation/pages/recipes_page.dart';
 import '../features/home/presentation/pages/settings_page.dart';
 import '../features/home/presentation/pages/shopping_list_page.dart';
@@ -45,6 +48,16 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
+      name: AppRoutes.editProfile,
+      page: () => const EditProfilePage(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.security,
+      page: () => const ChangePasswordPage(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
       name: AppRoutes.smartMealSuggestions,
       page: () => const SmartMealSuggestionsPage(),
       binding: HomeBinding(),
@@ -62,6 +75,11 @@ class AppPages {
     GetPage(
       name: AppRoutes.recipes,
       page: () => const RecipesPage(),
+      binding: HomeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.category,
+      page: () => const CategoryPage(),
       binding: HomeBinding(),
     ),
     GetPage(

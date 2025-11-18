@@ -4,6 +4,21 @@ import 'package:get/get.dart';
 import '../controllers/recipes_controller.dart';
 import '../models/recipe.dart';
 
+List<String> _computeHealthBenefits(Recipe r) {
+  final tags = r.tags.map((t) => t.toLowerCase()).toList();
+  final ingredients = r.ingredients.map((i) => i.toLowerCase()).toList();
+  final out = <String>[];
+  if (tags.any((t) => t.contains('omega'))) out.add('Supports heart health with omega-3');
+  if (tags.any((t) => t.contains('high protein'))) out.add('High protein for muscle repair');
+  if (tags.any((t) => t.contains('heart'))) out.add('Heart-friendly');
+  if (tags.any((t) => t.contains('vegetarian') || t.contains('vegan'))) out.add('Plant-based and fiber-rich');
+  if (ingredients.any((i) => i.contains('spinach') || i.contains('kale') || i.contains('berries'))) out.add('Rich in vitamins and antioxidants');
+  if (ingredients.any((i) => i.contains('oats') || i.contains('beans') || i.contains('quinoa') || i.contains('whole'))) out.add('Good source of fiber');
+  if (ingredients.any((i) => i.contains('turmeric') || i.contains('ginger'))) out.add('Anti-inflammatory properties');
+  return out.take(6).toList();
+}
+
+
 class RecipeDetailPage extends StatelessWidget {
   const RecipeDetailPage({super.key});
 
@@ -60,6 +75,19 @@ class RecipeDetailPage extends StatelessWidget {
                     recipe.description,
                     style: theme.textTheme.bodyLarge?.copyWith(color: Colors.grey.shade800),
                   ),
+                  const SizedBox(height: 24),
+                  Builder(builder: (context) {
+                    final benefits = _computeHealthBenefits(recipe);
+                    if (benefits.isEmpty) return const SizedBox.shrink();
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const _SectionTitle(title: 'Health Benefits'),
+                        const SizedBox(height: 12),
+                        ...benefits.map((b) => _BulletItem(text: b, bullet: Icons.favorite_outline)).toList(),
+                      ],
+                    );
+                  }),
                   const SizedBox(height: 28),
                   const _SectionTitle(title: 'Ingredients'),
                   const SizedBox(height: 12),

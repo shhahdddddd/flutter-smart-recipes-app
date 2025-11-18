@@ -5,16 +5,30 @@ import '../controllers/home_controller.dart';
 import '../../../../routes/app_routes.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 
-class HomeDrawer extends StatelessWidget {
+class HomeDrawer extends StatefulWidget {
   const HomeDrawer({super.key});
 
   @override
+  State<HomeDrawer> createState() => _HomeDrawerState();
+}
+
+class _HomeDrawerState extends State<HomeDrawer> {
+  late final HomeController controller;
+  late bool _isDark;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = Get.find<HomeController>();
+    _isDark = Get.isDarkMode;
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final controller = Get.find<HomeController>();
     final theme = Theme.of(context);
     return Drawer(
       elevation: 0,
-      backgroundColor: const Color(0xFFF6F4FB),
+      backgroundColor: theme.scaffoldBackgroundColor,
       child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +67,7 @@ class HomeDrawer extends StatelessWidget {
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                children: const [
+                children: [
                   _DrawerItem(
                     icon: Icons.home_outlined,
                     label: 'Home',
@@ -98,6 +112,21 @@ class HomeDrawer extends StatelessWidget {
                     icon: Icons.settings_outlined,
                     label: 'Settings',
                     route: AppRoutes.settings,
+                  ),
+                  const SizedBox(height: 8),
+                  ListTile(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                    leading: const Icon(Icons.brightness_6_outlined),
+                    title: const Text('Dark mode'),
+                    trailing: Switch(
+                      value: _isDark,
+                      onChanged: (isDark) {
+                        setState(() {
+                          _isDark = isDark;
+                        });
+                        Get.changeThemeMode(isDark ? ThemeMode.dark : ThemeMode.light);
+                      },
+                    ),
                   ),
                 ],
               ),

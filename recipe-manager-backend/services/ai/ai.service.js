@@ -25,7 +25,7 @@ class AIService {
           }
         ],
         temperature: 0.7,
-        max_tokens: 2000
+        max_tokens: 4000
       });
 
       const content = completion.choices[0].message.content;
@@ -58,7 +58,7 @@ class AIService {
           }
         ],
         temperature: 0.7,
-        max_tokens: 2000
+        max_tokens: 4000
       });
 
       const content = completion.choices[0].message.content;
@@ -73,14 +73,22 @@ class AIService {
   }
 
   buildRecipePrompt(ingredients, preferences) {
-    return `Crée 3 recettes utilisant principalement ces ingrédients: ${ingredients.join(', ')}.
+    return `Crée 12 recettes variées et personnalisées avec ces ingrédients principaux: ${ingredients.join(', ')}.
     
-Préférences alimentaires: ${preferences.diet || 'Aucune'}
-Allergies: ${preferences.allergies ? preferences.allergies.join(', ') : 'Aucune'}
-Temps de préparation maximum: ${preferences.maxCookingTime || '60'} minutes
-Difficulté: ${preferences.difficulty || 'Tous niveaux'}
+Contraintes et préférences:
+- Régime: ${preferences.diet || 'Aucun'}
+- Allergies: ${preferences.allergies ? preferences.allergies.join(', ') : 'Aucune'}
+- Ingrédients exclus: ${preferences.excludedIngredients ? preferences.excludedIngredients.join(', ') : 'Aucun'}
+- Objectifs santé: ${preferences.healthGoals ? preferences.healthGoals.join(', ') : 'Aucun'}
+- Conditions: ${preferences.conditions ? preferences.conditions.join(', ') : 'Aucune'}
+- Style de vie: ${preferences.lifestylePreferences ? preferences.lifestylePreferences.join(', ') : 'Aucun'}
+- Catégorie souhaitée (optionnel): ${preferences.category || 'Aucune'}
+- Temps max: ${preferences.maxCookingTime || '45'} minutes
+- Difficulté: ${preferences.difficulty || 'mixte'}
     
-Format de réponse JSON strict:
+Exige des recettes réellement différentes (petit-déjeuner, déjeuner, dîner, dessert, snacks) et adaptées aux préférences.
+
+Réponds STRICTEMENT en JSON:
 {
   "recipes": [
     {

@@ -25,6 +25,7 @@ class HomeController extends GetxController {
 
   final RxList<Recipe> recommendedRecipes = <Recipe>[].obs;
   final RxBool isLoadingRecommendations = false.obs;
+  final RxString searchQuery = ''.obs;
 
   @override
   void onInit() {
@@ -40,6 +41,11 @@ class HomeController extends GetxController {
 
   void updateUser(User updated) {
     user.value = updated;
+    _loadRecommendedRecipes();
+  }
+
+  void setSearchQuery(String value) {
+    searchQuery.value = value;
   }
 
   Future<String?> saveHealthProfile(HealthProfileInput input) async {
@@ -58,13 +64,44 @@ class HomeController extends GetxController {
       String? failureMessage;
       result.fold(
         (failure) => failureMessage = failure.message,
-        (updatedUser) => user.value = updatedUser,
+        (updatedUser) {
+          user.value = updatedUser;
+          _loadRecommendedRecipes();
+        },
       );
 
       return failureMessage;
     } finally {
       isSaving.value = false;
     }
+  }
+
+  String _pickImage(String raw, List<String> tags, String category, String title, String id) {
+  if (raw.trim().isNotEmpty) return raw;
+  final pool = [
+    'https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1612872087720-bb876e01fd95?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1506086679525-9f1d5f0de1c0?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1512058564366-18510be2f8ff?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1481931713751-5f8f9c63b6a0?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1445979323117-80453f573b71?auto=format&fit=crop&w=800&q=80',
+  ];
+  final basis = '${category.toLowerCase()} ${tags.join(' ')} ${title.toLowerCase()} ${id.toLowerCase()}'.trim();
+  final key = basis.isEmpty ? DateTime.now().millisecondsSinceEpoch.toString() : basis;
+  final idx = (key.hashCode & 0x7fffffff) % pool.length;
+  return pool[idx];
+}
+
+  double? _toDouble(dynamic v) {
+    if (v == null) return null;
+    if (v is num) return v.toDouble();
+    return double.tryParse(v.toString());
   }
 
   Future<void> _loadRecommendedRecipes() async {
@@ -84,26 +121,52 @@ class HomeController extends GetxController {
         final data = (decoded['data'] as List<dynamic>? ?? []);
         parsed = data.whereType<Map<String, dynamic>>().map((map) {
           final ingredientList = (map['ingredients'] as List<dynamic>? ?? []);
-          final ingredients = ingredientList
-              .map((ing) => ((ing as Map<String, dynamic>)['quantity']?.toString() ?? '').trim())
-              .toList();
+          final ingredients = ingredientList.map((ing) {
+            final i = ing as Map<String, dynamic>;
+            final name = (i['name'] ?? '').toString();
+            final quantity = (i['quantity'] ?? '').toString();
+            final note = (i['note'] ?? '').toString();
+            final parts = <String>[];
+            if (quantity.isNotEmpty) parts.add(quantity);
+            if (name.isNotEmpty) parts.add(name);
+            if (note.isNotEmpty) parts.add('($note)');
+            return parts.join(' ');
+          }).where((s) => s.trim().isNotEmpty).toList();
           final instructions = (map['instructions'] as List<dynamic>? ?? [])
               .map((s) => (s as Map<String, dynamic>)['description']?.toString() ?? '')
               .toList();
           final cookingTime = map['cookingTime'];
           final duration = cookingTime == null ? 'N/A' : '$cookingTime min';
           final tags = (map['tags'] as List<dynamic>? ?? []).map((t) => t.toString()).toList();
+          final nutrition = map['nutrition'] is Map<String, dynamic>
+              ? (map['nutrition'] as Map<String, dynamic>)
+              : null;
+          double? calories = _toDouble(nutrition?['calories'] ?? map['calories']);
+          double? protein = _toDouble(nutrition?['protein'] ?? map['protein']);
+          double? sugar = _toDouble(nutrition?['sugar'] ?? map['sugar']);
+          double? carbs = _toDouble(nutrition?['carbs'] ?? map['carbohydrates'] ?? map['carbs']);
+
           return Recipe(
             id: (map['_id'] ?? '').toString(),
             title: (map['title'] ?? '').toString(),
             description: (map['description'] ?? '').toString(),
             duration: duration,
             servings: 2,
-            imageUrl: (map['image'] ?? '').toString(),
+            imageUrl: _pickImage(
+              (map['image'] ?? '').toString(),
+              tags,
+              (map['category'] ?? '').toString(),
+              (map['title'] ?? '').toString(),
+              (map['_id'] ?? '').toString(),
+            ),
             tags: tags,
             ingredients: ingredients,
             steps: instructions,
             tips: const [],
+            calories: calories,
+            protein: protein,
+            sugar: sugar,
+            carbs: carbs,
           );
         }).toList();
       }
@@ -150,9 +213,17 @@ class HomeController extends GetxController {
           final data = (decoded['data'] as List<dynamic>? ?? []);
           parsed = data.whereType<Map<String, dynamic>>().map((map) {
             final ingredientList = (map['ingredients'] as List<dynamic>? ?? []);
-            final ingredients = ingredientList
-                .map((ing) => ((ing as Map<String, dynamic>)['quantity']?.toString() ?? '').trim())
-                .toList();
+            final ingredients = ingredientList.map((ing) {
+              final i = ing as Map<String, dynamic>;
+              final name = (i['name'] ?? '').toString();
+              final quantity = (i['quantity'] ?? '').toString();
+              final note = (i['note'] ?? '').toString();
+              final parts = <String>[];
+              if (quantity.isNotEmpty) parts.add(quantity);
+              if (name.isNotEmpty) parts.add(name);
+              if (note.isNotEmpty) parts.add('($note)');
+              return parts.join(' ');
+            }).where((s) => s.trim().isNotEmpty).toList();
             final instructions = (map['instructions'] as List<dynamic>? ?? [])
                 .map((s) => (s as Map<String, dynamic>)['description']?.toString() ?? '')
                 .toList();
@@ -165,7 +236,13 @@ class HomeController extends GetxController {
               description: (map['description'] ?? '').toString(),
               duration: duration,
               servings: 2,
-              imageUrl: (map['image'] ?? '').toString(),
+              imageUrl: _pickImage(
+                (map['image'] ?? '').toString(),
+                tags,
+                (map['category'] ?? '').toString(),
+                (map['title'] ?? '').toString(),
+                (map['_id'] ?? '').toString(),
+              ),
               tags: tags,
               ingredients: ingredients,
               steps: instructions,

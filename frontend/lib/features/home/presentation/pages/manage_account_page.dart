@@ -539,14 +539,14 @@ class ManageAccountPage extends StatelessWidget {
                   icon: Icons.person_outline,
                   title: 'Personal Information',
                   subtitle: 'Update name, email, and contact details',
-                  onTap: () => _editPersonalInfo(context, user),
+                  onTap: () => Get.toNamed(AppRoutes.editProfile, arguments: user),
                 ),
                 const SizedBox(height: 12),
                 _SettingsCard(
                   icon: Icons.lock_outline,
                   title: 'Security',
                   subtitle: 'Change password and manage sign-in options',
-                  onTap: () => _changePassword(context),
+                  onTap: () => Get.toNamed(AppRoutes.security),
                 ),
                 const SizedBox(height: 12),
                 _SettingsCard(

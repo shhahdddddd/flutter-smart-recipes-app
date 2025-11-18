@@ -152,6 +152,7 @@ exports.registerUser = async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
+        photoUrl: user.photoUrl,
         token: generateToken(user._id),
         healthProfile: user.healthProfile,
         favorites: user.favorites,
@@ -218,13 +219,50 @@ exports.uploadUserPhoto = async (req, res) => {
 
 exports.getUserRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find({ createdBy: req.user._id })
-      .sort({ createdAt: -1 });
+    const user = await User.findById(req.user._id).select('healthProfile');
+    const hp = user?.healthProfile || {};
+
+    const allergies = [
+      ...(hp.allergies || []),
+      ...(hp.intolerances || []),
+    ].map(s => String(s).toLowerCase());
+    const lifestyle = (hp.lifestylePreferences || []).map(s => String(s).toLowerCase());
+
+    const mine = await Recipe.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
+    const latest = await Recipe.find().sort({ createdAt: -1 }).limit(200);
+
+    const byId = new Set();
+    const filtered = [];
+
+    const matchesPrefs = (r) => {
+      const tags = (r.tags || []).map(t => String(t).toLowerCase());
+      const ing = (r.ingredients || []).map(i => String(i.name || '').toLowerCase());
+
+      if (lifestyle.includes('vegan') && !tags.some(t => t.includes('vegan'))) return false;
+      if (lifestyle.includes('vegetarian') && !(tags.some(t => t.includes('vegetarian')) || tags.some(t => t.includes('vegan')))) return false;
+
+      for (const a of allergies) {
+        if (a && ing.some(n => n.includes(a))) return false;
+      }
+      return true;
+    };
+
+    const pushIf = (r) => {
+      const id = r._id.toString();
+      if (byId.has(id)) return;
+      if (matchesPrefs(r)) {
+        byId.add(id);
+        filtered.push(r);
+      }
+    };
+
+    mine.forEach(pushIf);
+    latest.forEach(pushIf);
 
     res.json({
       success: true,
-      data: recipes,
-      count: recipes.length,
+      data: filtered.slice(0, 100),
+      count: filtered.length,
     });
   } catch (error) {
     console.error('Erreur récupération recettes utilisateur:', error);
@@ -329,6 +367,7 @@ exports.loginUser = async (req, res) => {
           _id: user._id,
           name: user.name,
           email: user.email,
+          photoUrl: user.photoUrl,
           token: generateToken(user._id),
           healthProfile: user.healthProfile,
           favorites: user.favorites,

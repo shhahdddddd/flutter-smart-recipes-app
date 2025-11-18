@@ -250,3 +250,487 @@ Error: Erreur lors de la génération du menu
 {
   "service": "recipe-manager-api"
 }
+2025-11-18 00:09:19 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:09:19 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:09:56 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:09:56 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:10:18 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:10:18 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:17:50 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:17:50 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:49:45 [ERROR] Recipe generation and save error: Recipe validation failed: category: `soup` is not a valid enum value for path `category`.
+ValidationError: Recipe validation failed: category: `soup` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "category": {
+      "name": "ValidatorError",
+      "message": "`soup` is not a valid enum value for path `category`.",
+      "properties": {
+        "message": "`soup` is not a valid enum value for path `category`.",
+        "type": "enum",
+        "enumValues": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "dessert",
+          "snack"
+        ],
+        "path": "category",
+        "value": "soup"
+      },
+      "kind": "enum",
+      "path": "category",
+      "value": "soup"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:49:45 [ERROR] Recipe generation error: Recipe validation failed: category: `soup` is not a valid enum value for path `category`.
+ValidationError: Recipe validation failed: category: `soup` is not a valid enum value for path `category`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "category": {
+      "name": "ValidatorError",
+      "message": "`soup` is not a valid enum value for path `category`.",
+      "properties": {
+        "message": "`soup` is not a valid enum value for path `category`.",
+        "type": "enum",
+        "enumValues": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "dessert",
+          "snack"
+        ],
+        "path": "category",
+        "value": "soup"
+      },
+      "kind": "enum",
+      "path": "category",
+      "value": "soup"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:50:46 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 00:50:46 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 11:23:43 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 11:23:43 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixte` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixte` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixte` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixte"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixte"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 11:23:45 [ERROR] Recipe generation and save error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}
+2025-11-18 11:23:45 [ERROR] Recipe generation error: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+ValidationError: Recipe validation failed: difficulty: `mixed` is not a valid enum value for path `difficulty`.
+    at Document.invalidate (C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3219:32)
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\document.js:3012:17
+    at C:\recipe-manager-backend\recipe-manager-backend\node_modules\mongoose\lib\schematype.js:1368:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+{
+  "service": "recipe-manager-api",
+  "errors": {
+    "difficulty": {
+      "name": "ValidatorError",
+      "message": "`mixed` is not a valid enum value for path `difficulty`.",
+      "properties": {
+        "message": "`mixed` is not a valid enum value for path `difficulty`.",
+        "type": "enum",
+        "enumValues": [
+          "easy",
+          "medium",
+          "hard"
+        ],
+        "path": "difficulty",
+        "value": "mixed"
+      },
+      "kind": "enum",
+      "path": "difficulty",
+      "value": "mixed"
+    }
+  },
+  "_message": "Recipe validation failed"
+}

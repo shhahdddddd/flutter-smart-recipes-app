@@ -77,7 +77,7 @@ class _RecipeListTile extends StatelessWidget {
     return InkWell(
       onTap: () => Get.toNamed(
         AppRoutes.recipeDetail,
-        arguments: recipe.id,
+        arguments: recipe,
       ),
       borderRadius: BorderRadius.circular(20),
       child: Container(
@@ -99,24 +99,35 @@ class _RecipeListTile extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Image.network(
-                recipe.imageUrl,
-                width: 90,
-                height: 90,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(
-                    width: 90,
-                    height: 90,
-                    color: Colors.grey.shade200,
-                    alignment: Alignment.center,
-                    child: const Icon(
-                      Icons.broken_image_outlined,
-                      color: Colors.grey,
+              child: (recipe.imageUrl.trim().isEmpty)
+                  ? Container(
+                      width: 90,
+                      height: 90,
+                      color: Colors.grey.shade200,
+                      alignment: Alignment.center,
+                      child: const Icon(
+                        Icons.restaurant_menu,
+                        color: Colors.grey,
+                      ),
+                    )
+                  : Image.network(
+                      recipe.imageUrl,
+                      width: 90,
+                      height: 90,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          width: 90,
+                          height: 90,
+                          color: Colors.grey.shade200,
+                          alignment: Alignment.center,
+                          child: const Icon(
+                            Icons.broken_image_outlined,
+                            color: Colors.grey,
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
             ),
             const SizedBox(width: 16),
             Expanded(

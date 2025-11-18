@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/smart_meal_suggestions_controller.dart';
 
-class ShoppingListPage extends StatelessWidget {
+class ShoppingListPage extends StatefulWidget {
   const ShoppingListPage({super.key});
+
+  @override
+  State<ShoppingListPage> createState() => _ShoppingListPageState();
+}
+
+class _ShoppingListPageState extends State<ShoppingListPage> {
+  @override
+  void initState() {
+    super.initState();
+    Get.find<SmartMealSuggestionsController>().reloadUserShoppingList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +105,7 @@ class ShoppingListPage extends StatelessWidget {
                     tooltip: 'Remove',
                     icon: const Icon(Icons.delete_outline),
                     onPressed: () {
-                      controller.userShoppingList.removeAt(index);
+                      controller.removeFromShoppingListAt(index);
                     },
                   ),
                 ],

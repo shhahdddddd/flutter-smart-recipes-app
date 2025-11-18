@@ -143,14 +143,4 @@ class AuthController extends GetxController {
     resetForms();
     Get.offAllNamed(AppRoutes.login);
   }
-
-  @override
-  void onClose() {
-    nameController.dispose();
-    emailController.dispose();
-    passwordController.dispose();
-    conditionsController.dispose();
-    notesController.dispose();
-    super.onClose();
-  }
 }

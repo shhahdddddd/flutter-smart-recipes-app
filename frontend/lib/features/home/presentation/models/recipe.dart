@@ -10,6 +10,10 @@ class Recipe {
     required this.ingredients,
     required this.steps,
     this.tips = const [],
+    this.calories,
+    this.protein,
+    this.sugar,
+    this.carbs,
   });
 
   final String id;
@@ -22,6 +26,11 @@ class Recipe {
   final List<String> ingredients;
   final List<String> steps;
   final List<String> tips;
+
+  final double? calories;
+  final double? protein;
+  final double? sugar;
+  final double? carbs;
 }
 
 const recipesCatalog = <Recipe>[
